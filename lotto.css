@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.lotto {
+    text-transform: uppercase;
+    background-color: #696980;
+    border-radius: 15px;
+
+    text-align: center;
+    width: 700px;
+    max-width: 70%;
+    margin: 150px auto 0;
+}
+
+.btn-button {
+    margin: 25px 0 15px 0;
+    padding: 12px 14px;
+    border: 3px solid #000;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    background: #FFF;
+    cursor: pointer;
+}
+
+.numbersLotto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: #FFF;
+    font-size: 24px;
+    margin-top: 5px;
+    text-shadow: 1px 1px 2px #000;
+}
