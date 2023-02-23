@@ -1,17 +1,17 @@
-function genereazaNumerele() {
+function generateNumbers() {
   let index;
-  let arrayNumere = [];
-  const containerNumere = document.querySelector(".numbersLotto");
-  containerNumere.innerHTML = "";
+  let arrayNumbers = [];
+  const containerNumbers = document.querySelector(".numbersLotto");
+  containerNumbers.innerHTML = "";
   for (index = 0; index < 6; index++) {
-    let numarAleatoriu = Math.ceil(Math.random() * 49);
-    if (arrayNumere.includes(numarAleatoriu)) {
+    let randomNumber = Math.ceil(Math.random() * 49);
+    if (arrayNumere.includes(randomNumber)) {
       index--;
     } else {
-      arrayNumere.push(numarAleatoriu);
+      arrayNumere.push(randomNumber);
       let elementSpan = document.createElement("span");
-      elementSpan.innerHTML = numarAleatoriu;
-      containerNumere.appendChild(elementSpan);
+      elementSpan.innerHTML = randomNumber;
+      containerNumbers.appendChild(elementSpan);
     }
   }
 }
