@@ -6,7 +6,6 @@ function genereazaNumerele() {
   for (index = 0; index < 6; index++) {
     let numarAleatoriu = Math.ceil(Math.random() * 49);
     if (arrayNumere.includes(numarAleatoriu)) {
-      // true/false
       index--;
     } else {
       arrayNumere.push(numarAleatoriu);
