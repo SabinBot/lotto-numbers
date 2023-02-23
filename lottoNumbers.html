@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numere LOTO</title>
+
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .lotto {
+            text-transform: uppercase;
+            background-color: #696980;
+            border-radius: 15px;
+            
+            text-align: center;
+            width: 700px;
+            max-width: 70%;
+            margin: 150px auto 0;
+        }
+        .btn-button {
+            margin: 25px 0 15px 0;
+            padding: 12px 14px;
+            border: 3px solid #000;
+            border-radius: 10px;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: 700;
+            background: #FFF;
+            cursor: pointer;
+        }
+
+        .numbersLotto {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            color: #FFF;
+            font-size: 24px;
+            margin-top: 5px;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="lotto">
+        <h1 class="sTitle">Afla numerele castigatoare la loto</h1>
+        <button class="btn-button" onclick="genereazaNumerele()">Genereaza numere</button>
+        <div class="numbersLotto"></div>
+    </div>
+    
+
+    <script>
+
+
+function genereazaNumerele() {
+
+        let index;
+        let arrayNumere = [];
+            const containerNumere = document.querySelector('.numbersLotto');
+            containerNumere.innerHTML = '';
+            for(index = 0; index < 6; index++) {
+                let numarAleatoriu = Math.ceil(Math.random() * 49);
+                if(arrayNumere.includes(numarAleatoriu)) { // true/false
+                    index--;
+                } else {
+                arrayNumere.push(numarAleatoriu);
+                let elementSpan = document.createElement('span');
+                elementSpan.innerHTML = numarAleatoriu;
+                containerNumere.appendChild(elementSpan); 
+                }
+
+            }
+
+            
+            // console.log('genereazaNumerele');
+        }
+
+
+    </script>
+</body>
+</html>
